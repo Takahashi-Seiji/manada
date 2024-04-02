@@ -1,0 +1,11 @@
+<h1>Dashboard</h1>
+<h2><%= current_user.first_name %></h2>
+<h1>Animals that I am looking for</h1>
+<% @missing_animals.each do |animal| %>
+  <p>Name:<%= animal.name %></p>
+<% end %>
+
+<h2>Animals I have found</h2>
+<% @found_animals.each do |animal| %>
+  <p>Name:<%= animal.name %></p>
+<% end %>
