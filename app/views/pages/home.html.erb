@@ -16,4 +16,5 @@
   <h3><%= animal.color %></h3>
   <h3><%= animal.description %></h3>
   <h3><%= animal.age %></h3>
+  <h3><%= cl_image_tag(animal.photo.key, height: 300, width: 400, crop: :fill) if animal.photo.present? && animal.photo.key.present? %></h3>
 <% end %>
