@@ -9,6 +9,8 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 gem "sass-rails"
 gem "bootstrap", "~> 5.1.3"
 
+# Simple form
+gem "simple_form"
 
 # Devise
 gem "devise"

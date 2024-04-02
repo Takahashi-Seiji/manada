@@ -1,1 +1,12 @@
 <h1>Found an animal?</h1>
+<%= simple_form_for @animal do |f| %>
+  <%= f.input :name %>
+  <%= f.input :species %>
+  <%= f.input :found_on %>
+  <%= f.input :found_location %>
+  <%= f.input :size %>
+  <%= f.input :color %>
+  <%= f.input :description %>
+  <%= f.input :age %>
+  <%= f.submit %>
+<% end %>

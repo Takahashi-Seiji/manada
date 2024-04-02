@@ -5,3 +5,15 @@
 <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 
 <%= link_to "Found an animal", new_animal_path %>
+
+
+<h2><% @animals.each do |animal| %></h2>
+  <h3><%= animal.name %></h3>
+  <h3><%= animal.species %></h3>
+  <h3><%= animal.found_on %></h3>
+  <h3><%= animal.found_location %></h3>
+  <h3><%= animal.size %></h3>
+  <h3><%= animal.color %></h3>
+  <h3><%= animal.description %></h3>
+  <h3><%= animal.age %></h3>
+<% end %>
