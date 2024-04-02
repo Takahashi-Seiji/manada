@@ -4,17 +4,37 @@
 
 <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 
-<%= link_to "Found an animal", new_animal_path %>
+<%= link_to "Found a missing animal", new_animal_path %>
+<%= link_to "Report a missing animal", new_missing_animal_path %>
 
 
-<h2><% @animals.each do |animal| %></h2>
-  <h3><%= animal.name %></h3>
-  <h3><%= animal.species %></h3>
-  <h3><%= animal.found_on %></h3>
-  <h3><%= animal.found_location %></h3>
-  <h3><%= animal.size %></h3>
-  <h3><%= animal.color %></h3>
-  <h3><%= animal.description %></h3>
-  <h3><%= animal.age %></h3>
-  <h3><%= cl_image_tag(animal.photo.key, height: 300, width: 400, crop: :fill) if animal.photo.present? && animal.photo.key.present? %></h3>
+<h2>Missing animals</h2>
+  <% @animals.each do |animal| %>
+  <div class="border p-3 w-25">
+    <h3><%= animal.name %></h3>
+    <h3><%= animal.species %></h3>
+    <h3><%= animal.found_on %></h3>
+    <h3><%= animal.found_location %></h3>
+    <h3><%= animal.size %></h3>
+    <h3><%= animal.color %></h3>
+    <h3><%= animal.description %></h3>
+    <h3><%= animal.age %></h3>
+    <h3><%= cl_image_tag(animal.photo.key, height: 300, width: 300, crop: :fill) if animal.photo.present? && animal.photo.key.present? %></h3>
+  </div>
+<% end %>
+
+<h2>My missing animals</h2>
+  <% @missing_animals.each do |missing_animal| %>
+  <div class="border p-3 w-25">
+    <h3><%= missing_animal.name %></h3>
+    <h3><%= missing_animal.species %></h3>
+    <h3><%= missing_animal.description %></h3>
+    <h3><%= missing_animal.breed %></h3>
+    <h3><%= missing_animal.date_missing %></h3>
+    <h3><%= missing_animal.location %></h3>
+    <h3><%= missing_animal.animal_color %></h3>
+    <h3><%= missing_animal.animal_size %></h3>
+    <h3><%= missing_animal.animal_age %></h3>
+    <h3><%= cl_image_tag(missing_animal.photo.key, height: 300, width: 300, crop: :fill) if missing_animal.photo.present? && missing_animal.photo.key.present? %></h3>
+  </div>
 <% end %>
