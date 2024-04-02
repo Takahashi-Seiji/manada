@@ -12,6 +12,11 @@ gem "bootstrap", "~> 5.1.3"
 # Simple form
 gem "simple_form"
 
+gem "dotenv-rails"
+
+# Cloudinary
+gem "cloudinary"
+
 # Devise
 gem "devise"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

@@ -1,0 +1,6 @@
+development:
+  cloud_name: "dkzokpvdl"
+  api_key: "742294794245977"
+  api_secret: "LCIoW_DJbHoELVURqkm3Toiz_Is"
+  secure: true
+  cdn_subdomain: true
