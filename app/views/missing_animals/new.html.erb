@@ -1,0 +1,15 @@
+<h1>Report a missing animal</h1>
+
+<%= simple_form_for @missing_animal do |f| %>
+  <%= f.input :name %>
+  <%= f.input :species %>
+  <%= f.input :description %>
+  <%= f.input :breed %>
+  <%= f.input :date_missing %>
+  <%= f.input :location %>
+  <%= f.input :animal_color %>
+  <%= f.input :animal_size %>
+  <%= f.input :animal_age %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
